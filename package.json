@@ -1,0 +1,63 @@
+{
+  "name": "stockmap",
+  "version": "1.0.0",
+  "description": "This is a web app that empowers people with stock analytics",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "npm run build-watch & npm run start-server",
+    "start-server": "nodemon main.js -e html,js,css --ignore public",
+    "build-watch": "webpack -w",
+    "start": "echo 'Running server for production - devs use npm run start-dev for development' && node main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-minutti/stockmap.git"
+  },
+  "keywords": [],
+  "author": "Kevin M",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "nodemon": "^2.0.7",
+    "redux-devtools-extension": "^2.13.8",
+    "style-loader": "^2.0.0",
+    "volleyball": "^1.5.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "postscribe": "^2.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/K-minutti/stockmap/issues"
+  },
+  "homepage": "https://github.com/K-minutti/stockmap#readme"
+}
