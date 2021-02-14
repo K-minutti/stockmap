@@ -5,10 +5,10 @@ import { createLogger } from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
 
-let middleware = [thunkMiddleware.withExtraArguement({ axios })];
+let middleware = [thunkMiddleware.withExtraArgument({ axios })];
 if (process.browser) {
   middleware = [...middleware, createLogger({ collapsed: true })];
-}
+} // only log messages when running in the browser
 
 export default createStore(
   appReducer,
