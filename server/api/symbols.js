@@ -9,7 +9,9 @@ router.post("/analyze", async (req, res, next) => {
       symbolsToAnalyze,
       listedSymbols["_rejectionHandler0"]
     );
-    const symbolsCreated = await Symbol.bulkCreate(symbolData);
+    const symbolsCreated = await Symbol.bulkCreate(symbolData, {
+      updateOnDuplicate: ["symbol"],
+    }); //fields:["symbol"],
     res.json(symbolsCreated);
   } catch (err) {
     console.error(err);
