@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import CanvasChart from "./CanvasChart";
 import getTradingViewRatings from "./other/TradingView";
 
 class Analysis extends React.Component {
@@ -80,6 +81,8 @@ class Analysis extends React.Component {
         <div>
           <h1>More Analysis...</h1>
           <hr></hr>
+
+          <CanvasChart />
         </div>
       </div>
     );
