@@ -4,6 +4,7 @@ import Searchbar from "./Searchbar";
 import { setSymbols } from "../redux/symbols";
 import axios from "axios";
 import Analysis from "./Analysis";
+import CanvasChart from "./CanvasChart";
 
 class Home extends React.Component {
   constructor() {
@@ -73,6 +74,9 @@ class Home extends React.Component {
             </div>
           </React.Fragment>
         )}
+        <div>
+          <CanvasChart />
+        </div>
       </div>
     );
   }

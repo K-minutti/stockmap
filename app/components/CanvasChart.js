@@ -31,13 +31,16 @@ class CanvasChart extends Component {
               Number(data[i].low),
               Number(data[i].close),
             ],
+            color: data[i].open < data[i].close ? "green" : "red",
           });
           dps2.push({
             x: new Date(data[i].date),
             y: Number(data[i].volume_usd),
+            color: data[i].open < data[i].close ? "green" : "red",
           });
           dps3.push({ x: new Date(data[i].date), y: Number(data[i].close) });
         }
+
         this.setState({
           isLoaded: true,
           dataPoints1: dps1,
@@ -50,6 +53,7 @@ class CanvasChart extends Component {
   render() {
     const options = {
       theme: "light2",
+      // backgroundColor: "#6a5acd",
       title: {
         text: "React StockChart with Date-Time Axis",
       },
@@ -87,6 +91,8 @@ class CanvasChart extends Component {
               name: "Price (in USD)",
               yValueFormatString: "$#,###.##",
               type: "candlestick",
+              risingColor: "green",
+              fallingColor: "red",
               dataPoints: this.state.dataPoints1,
             },
           ],
@@ -131,7 +137,7 @@ class CanvasChart extends Component {
     };
     const containerProps = {
       width: "100%",
-      height: "450px",
+      height: "850px",
       margin: "auto",
     };
     return (
