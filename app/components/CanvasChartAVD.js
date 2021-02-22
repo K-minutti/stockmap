@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 import CanvasJSReact from "./other/canvasjs.stock.react";
 const CanvasJS = CanvasJSReact.CanvasJS;
@@ -15,8 +16,8 @@ class CanvasChart extends Component {
   }
 
   componentDidMount() {
-    //Reference: https://reactjs.org/docs/faq-ajax.html#example-using-ajax-results-to-set-local-state
-    fetch("https://canvasjs.com/data/docs/ltcusd2018.json")
+    Reference: //reactjs.org/docs/faq-ajax.html#example-using-ajax-results-to-set-local-state
+    https: fetch("https://canvasjs.com/data/docs/ltcusd2018.json")
       .then((res) => res.json())
       .then((data) => {
         let dps1 = [],

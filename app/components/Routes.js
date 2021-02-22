@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
+import Analysis from "./Analysis";
 
 const Routes = () => {
   return (
@@ -9,6 +10,8 @@ const Routes = () => {
       <Navbar />
       <main>
         <Home />
+        {/* <Analysis/>
+        <SingleView/> */}
       </main>
     </Router>
   );
