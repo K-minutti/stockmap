@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import Searchbar from "./Searchbar";
 import { setSymbols } from "../redux/symbols";
 import axios from "axios";
-import Analysis from "./Analysis";
 import CanvasChart from "./CanvasChartAVD";
+import { Redirect } from "react-router-dom";
 
 class Home extends React.Component {
   constructor() {
@@ -55,7 +55,7 @@ class Home extends React.Component {
     return (
       <div className="home-main-container">
         {canRenderAnalysis ? (
-          <Analysis />
+          <Redirect to="/analysis" />
         ) : (
           <React.Fragment>
             <Searchbar handleKeyDown={this.handleKeyDown} />
@@ -63,6 +63,7 @@ class Home extends React.Component {
               <strong>Symbols: </strong> {symbols.join("  ")}
             </p>
             <hr></hr>
+
             <div className="btn-analyze-container">
               <button
                 className="btn-analyze"
