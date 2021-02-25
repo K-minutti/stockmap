@@ -12,11 +12,14 @@ router.post("/analyze", async (req, res, next) => {
     const symbolsCreated = await Symbol.bulkCreate(symbolData, {
       updateOnDuplicate: ["symbol"],
     }); //fields:["symbol"],
+    // call api to make request for historical data of each
     res.json(symbolsCreated);
   } catch (err) {
     console.error(err);
   }
 });
+
+// router.get("/historicalData");
 
 function getSymbolDataObjects(inputSymbols, listedSymbols) {
   const symbolsTocreate = [];

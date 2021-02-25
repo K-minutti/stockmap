@@ -35,7 +35,10 @@ class Home extends React.Component {
     try {
       const symbols = this.props.symbols;
       console.log("symbols on analyze submit ---> ", symbols);
+
       await axios.post("/api/symbols/analyze", { symbols });
+      //make thunk request that makes the request to the backend to make
+      // the api request to av?
       setTimeout(() => {
         this.setState({
           loadingAnalysis: false,
